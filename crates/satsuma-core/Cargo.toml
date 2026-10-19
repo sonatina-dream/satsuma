@@ -1,0 +1,10 @@
+[package]
+name = "satsuma-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Platform-independent logic for Satsuma: formats, conversion matrix, tools, naming, wheel geometry and drag-gesture state machine."
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true

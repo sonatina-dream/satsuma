@@ -1,0 +1,29 @@
+[workspace]
+resolver = "2"
+members = ["crates/satsuma-core", "crates/satsuma-engine", "crates/satsuma-app"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+rust-version = "1.80"
+
+[workspace.dependencies]
+satsuma-core = { path = "crates/satsuma-core" }
+satsuma-engine = { path = "crates/satsuma-engine" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+objc2 = "0.6"
+objc2-foundation = "0.3"
+objc2-app-kit = "0.3"
+objc2-pdf-kit = "0.3"
+objc2-core-foundation = "0.3"
+objc2-core-graphics = "0.3"
+objc2-core-text = "0.3"
+objc2-image-io = "0.3"
+objc2-service-management = "0.3"
+
+[profile.release]
+lto = "thin"
+codegen-units = 4

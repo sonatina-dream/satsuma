@@ -1,0 +1,29 @@
+[package]
+name = "satsuma-engine"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Local conversion backends for Satsuma (sips, textutil, tar, ffmpeg, PDFKit, CoreGraphics, CoreText)."
+
+[dependencies]
+satsuma-core.workspace = true
+thiserror.workspace = true
+serde_json.workspace = true
+calamine = "0.36"
+rust_xlsxwriter = "0.100"
+csv = "1"
+zip = { version = "9", default-features = false, features = ["deflate"] }
+flate2 = "1"
+pulldown-cmark = { version = "0.13", default-features = false, features = ["html"] }
+plist = "1"
+tempfile = "3"
+objc2.workspace = true
+objc2-foundation.workspace = true
+objc2-app-kit.workspace = true
+objc2-pdf-kit.workspace = true
+objc2-core-foundation.workspace = true
+objc2-core-graphics.workspace = true
+objc2-core-text.workspace = true
+objc2-image-io.workspace = true
+objc2-vision = "0.3"
+objc2-core-image = "0.3"
